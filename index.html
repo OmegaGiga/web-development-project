@@ -135,9 +135,27 @@
                 border-radius:1em;
                 position:sticky;
             }
+            .container {
+            position: relative; /* Needed to position the image relative to this element */
+            width: 400px;
+            height: 200px;
+            background-color: lightgray;
+            }
+
+            .floating-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px; /* Adjust size as needed */
+            height: auto;
+            }
         </style>
     </head>
     <body>
+        <div class="container">
+            <img src="web-development-project/page-designs/banner-element-1.png" alt="Floating Image" class="floating-image">
+            <p>This is some content inside the container.</p>
+        </div>
         <!--The banner with links.-->
         <div id="banner_links">
             <a href="web-development-project/index.html">Home</a> |
