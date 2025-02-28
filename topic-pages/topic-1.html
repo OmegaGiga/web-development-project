@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <base href="https://omegagiga.github.io/web-development-project">
+        <link rel="stylesheet" href="web-development-project/stylesheets/stylesheet.css">
         <title>Leonardo's Amazing Research</title>
         <!-- This style section is temporary. Will be moved later.-->
-        <style>
+        <!--<style>
             body {
                 display: block;
                 margin: 0;
@@ -16,7 +17,7 @@
             div {
                 display:grid;
             }
-            h1 {
+            #h1_border {
                 text-align:center;
                 font-family:'Courier New', Courier, monospace;
                 font-variant:small-caps;
@@ -69,7 +70,7 @@
                 width:100%;
                 height:110%;
             }
-            .grid-container {
+            .grid_container_basic {
                 display:grid;
                 grid-template-columns: 1fr;
                 gap: 0.6em;
@@ -99,7 +100,7 @@
                 border-radius:1em;
                 position:sticky;
             }
-        </style>
+        </style>-->
     </head>
     <body>
         <!--The banner with links.-->
@@ -115,12 +116,12 @@
         <!--The header with title.-->
         <div>
             <header>
-                <h1>= <span id="title_word_1">Topic</span><span id="title_word_2"> Title</span> =</h1>
+                <h1 id="h1_border">= <span id="title_word_1">Topic</span><span id="title_word_2"> Title</span> =</h1>
             </header>
         </div>
 
         <!--This is the main content box.-->
-        <div class="grid-container">
+        <div class="grid_container_basic">
             <div id="main-content">
                 <div id="content">
                     <h2>Content</h2>
