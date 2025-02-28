@@ -26,6 +26,12 @@ a:hover {
     color:darkgoldenrod;
     text-decoration: underline;
 }
+table {
+    border:0.5em black;border-style:double dashed;
+}
+td {
+    border-bottom:0.1em black;border-style:solid;
+}
 .body {
     text-align:center;
     font-size:110%;
