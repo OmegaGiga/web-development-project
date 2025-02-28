@@ -124,6 +124,7 @@ a:hover {
     background-color:black;
     border-radius:1em;
     position:sticky;
+    margin-top:0.6em;
 }
 .banner-top-left {
     position:static;
@@ -204,9 +205,12 @@ a:hover {
 }
 .grid_container_basic {
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 25% 1fr 25%;
     gap: 0.6em;
     padding: 0.6em;
+}
+.main_content_box {
+    grid-column: 2 / 3;
 }
 #content {
     border:black 0.2em solid;
