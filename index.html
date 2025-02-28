@@ -20,9 +20,11 @@
                 text-align:center;
                 font-family:'Courier New', Courier, monospace;
                 font-variant:small-caps;
+                /*
                 border: 0.3em solid;
                 border-style: double dashed;
                 border-radius:10em 10em 5em 5em;
+                */
                 padding:0.3em;
                 text-shadow: 0.1em 0.1em 0.1em lightgrey;
             }
@@ -60,6 +62,7 @@
                 color:goldenrod;
                 text-align:center;
                 width:100%;
+                position:absolute;
             }
             .grid-container {
                 display:grid;
@@ -141,21 +144,25 @@
             height: 200px;
             background-color: lightgray;
             }
-
-            .floating-image {
-            position: absolute;
-            top: 0;
+            .banner-top-left {
+            position:relative;
+            top: 10%;
             left: 0;
-            width: 50px; /* Adjust size as needed */
+            width: 15%;
             height: auto;
+            transform: rotate(135deg);
+            }
+            .banner-top-right {
+            position:relative;
+            top: 0;
+            left: 50%;
+            width: 15%;
+            height: auto;
+            transform: rotate(-135deg);
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <img src="web-development-project/page-designs/banner-element-1.png" alt="Floating Image" class="floating-image">
-            <p>This is some content inside the container.</p>
-        </div>
         <!--The banner with links.-->
         <div id="banner_links">
             <a href="web-development-project/index.html">Home</a> |
@@ -167,6 +174,8 @@
         <!--The header with title.-->
         <div>
             <header>
+                <img src="web-development-project/page-designs/banner-element-1.png" alt="Top-left symbol of Korean flag." class="banner-top-left">
+                <img src="web-development-project/page-designs/banner-element-2.png" alt="Top-right symbol of Korean flag." class="banner-top-right">
                 <h1>Leonardo's <span id="header_span">Amazing</span> Research<span id="header_subtext"><br>ON WEB BROWSERS</span></h1>
             </header>
         </div>
@@ -197,7 +206,7 @@
         <!--This is the footer.-->
         <div>
             <footer class="footer">
-                <p>&copy; 2025 Leonardo's Amazing Research</p>
+                <p>&copy; 2025 Leonardo J. Mendez-Rivera</p>
             </footer>
         </div>
     </body>
