@@ -63,6 +63,7 @@ a:hover {
     text-align:center;
     grid-column: 1 / 3;
     grid-row: 1;
+    padding:0.6em;
 }
 #introduction h2, p {
     margin:0.3em;
@@ -73,6 +74,7 @@ a:hover {
     text-align:center;
     grid-column: 1 / 3;
     grid-row: 2;
+    padding:0.6em;
 }
 #key_terms h2, p {
     margin:0.3em;
@@ -216,6 +218,7 @@ a:hover {
     border:black 0.2em solid;
     border-radius:0.6em;
     text-align:center;
+    padding:0.6em;
 }
 #content h2, p {
     margin:0.3em;
