@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <base href="https://omegagiga.github.io/web-development-project" target="_blank">
+        <base href="https://omegagiga.github.io/web-development-project">
         <title>Leonardo's Amazing Research</title>
         <!-- This style section is temporary. Will be moved later.-->
         <style>
@@ -20,11 +20,7 @@
                 text-align:center;
                 font-family:'Courier New', Courier, monospace;
                 font-variant:small-caps;
-                /*
-                border: 0.3em solid;
-                border-style: double dashed;
-                border-radius:10em 10em 5em 5em;
-                */
+                font-size:3em;
                 padding:0.3em;
                 text-shadow: 0.1em 0.1em 0.1em lightgrey;
             }
@@ -138,14 +134,8 @@
                 border-radius:1em;
                 position:sticky;
             }
-            .container {
-            position: relative; /* Needed to position the image relative to this element */
-            width: 400px;
-            height: 200px;
-            background-color: lightgray;
-            }
             .banner-top-left {
-            position:relative;
+            position:static;
             top: 10%;
             left: 0;
             width: 10%;
@@ -153,7 +143,7 @@
             transform: rotate(135deg);
             }
             .banner-top-right {
-            position:relative;
+            position:static;
             top: 10%;
             float:right;
             right: 0;
@@ -162,7 +152,7 @@
             transform: rotate(-135deg);
             }
             .banner-bottom-left {
-            position:relative;
+            position:static;
             top: 10%;
             left: 0;
             width: 10%;
@@ -170,13 +160,17 @@
             transform: rotate(-135deg);
             }
             .banner-bottom-right {
-            position:relative;
+            position:static;
             top: 10%;
             float:right;
             right: 0;
             width: 10%;
             height: auto;
             transform: rotate(135deg);
+            }
+            #header {
+                margin-top:1%;
+                margin-bottom:5%;
             }
         </style>
     </head>
@@ -185,12 +179,12 @@
         <div id="banner_links">
             <a href="web-development-project/index.html">Home</a> |
             <a href="web-development-project/topic-pages/topic-1.html">Topic 1</a> |
-            <a>Topic 2</a> |
-            <a>References</a>
+            <a href="web-development-project/topic-pages/topic-2.html">Topic 2</a> |
+            <a href="web-development-project/references.html">References</a>
         </div>
         
         <!--The header with title.-->
-        <div>
+        <div id="header">
             <header>
                 <img src="web-development-project/page-designs/banner-element-1.png" alt="Top-left symbol of Korean flag." class="banner-top-left">
                 <img src="web-development-project/page-designs/banner-element-2.png" alt="Top-right symbol of Korean flag." class="banner-top-right">
