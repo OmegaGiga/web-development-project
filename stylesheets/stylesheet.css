@@ -239,3 +239,8 @@ td {
 .no_margin {
     margin:0;
 }
+#quiz {
+    border:black 0.2em solid;
+    border-radius:0.6em;
+    padding:0.6em;
+}
