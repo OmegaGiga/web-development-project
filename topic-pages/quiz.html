@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="https://omegagiga.github.io/web-development-project">
+        <link rel="stylesheet" href="web-development-project/stylesheets/stylesheet.css">
+        <title>Leonardo's Amazing Research</title>
+    </head>
+    <body>
+        <!--The banner with links.-->
+        <div id="banner_links_black_blue"> <!--This div creates a cascading effect.-->
+            <div id="banner_links_black">
+               || <a href="web-development-project/index.html">Home</a> |
+                <a href="web-development-project/references.html">References</a> ||
+            </div>
+        </div>
+
+        <!--The header with title.-->
+        <div>
+            <header>
+                <h1 id="h1_border">= <span id="title_word_1">Browser</span><span id="title_word_2"> History</span> =</h1>
+            </header>
+        </div>
+
+        <!--This is the main content box.-->
+        <div class="grid_container_basic">
+            <div class="main_content_box">
+                <div id="quiz">
+                    <h2>Web Browser Quiz</h2>
+                    <p>This is a quiz about certain Web Browser topics covered in this website.</p>
+                    <form id="quizForm">
+                        <!-- Three radio questions, one text question, and one checkbox question -->
+                        <div>
+                            <label for="question1">Select the correct answer: (it's A)</label><br>
+                            <input type="radio" id="question1" name="q1" value="a"> A<br>
+                            <input type="radio" id="question1" name="q1" value="b"> B<br>
+                            <input type="radio" id="question1" name="q1" value="c"> C<br>
+                        </div>
+                        <div>
+                            <label for="question2">Select the correct answer: (it's B)</label><br>
+                            <input type="radio" id="question2" name="q2" value="a"> A<br>
+                            <input type="radio" id="question2" name="q2" value="b"> B<br>
+                            <input type="radio" id="question2" name="q2" value="c"> C<br>
+                        </div>
+                        <div>
+                            <label for="question3">Select the correct answer: (it's C)</label><br>
+                            <input type="radio" id="question3" name="q3" value="a"> A<br>
+                            <input type="radio" id="question3" name="q3" value="b"> B<br>
+                            <input type="radio" id="question3" name="q3" value="c"> C<br>
+                        </div>
+                        <div>
+                            <label for="question4">Type the correct answer: (it's "browser")</label><br>
+                            <input type="text" id="question4" name="q4"><br>
+                        </div>
+                        <div>
+                            <label for="question5">Select the correct answers: (they're A, B, and D)</label><br>
+                            <input type="checkbox" id="question5" name="q5" value="a"> A<br>
+                            <input type="checkbox" id="question5" name="q5" value="b"> B<br>
+                            <input type="checkbox" id="question5" name="q5" value="c"> C<br>
+                            <input type="checkbox" id="question5" name="q5" value="d"> D<br>
+                        </div>
+                        <button type="submit" id="submit">Get Results</button>
+                    </form>
+                    
+                    <div id="results"></div>
+
+                    <button id="restart">Restart Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!--This is the footer.-->
+        <div>
+            <footer class="footer">
+                <p>&copy; 2025 Leonardo J. Mendez-Rivera</p>
+            </footer>
+        </div>
+
+        <script>
+            document.getElementById("quizForm").addEventListener("submit", function(e) {
+                event.preventDefault(); // prevent the page from refreshing
+                
+                let correctAnswers = { q1: "a", q2: "b", q3: "c", q4: "browser", q5: ["a", "b", "d"] };
+                /* This line creates a FormData object that collects the data from the form above when the submit button is hit.
+                   event.target is the form element corresponding to the submit event trigger. FormData will store the input in formData. */
+                let formData = new FormData(e.target);
+                let score = 0;
+                let output = [];
+                
+                // Loop through each question and compare the user's answer to the correct answer (listed above)
+                for (let question in correctAnswers) {
+                    let expectedAnswer = correctAnswers[question];
+
+                    /* getAll() makes an array of the values associated with question, which is the key in correctAnswers for the interation.
+                       map() iterates over each answer (ans) in the array, trims, and lowercases the value. */
+                    let userAnswer = formData.getAll(question).map(ans => ans.trim().toLowerCase());
+                    
+                    /* If expectedAnswer is an array (checkbox question), compare sets.
+                       This code determines whether the user's answer to a quiz question is correct 
+                       by comparing it to the expected answer. It uses a conditional (ternary) operator to handle two 
+                       different scenarios: when the expected answer is an array (for multiple-answer questions) and 
+                       when it is a single value (for single-answer questions).
+                       JSON.stringify() converts arrays into JSON strings for a "strict comparison," which ensures
+                       the arrays are identical in both content and order after sorting.
+                       First case (Multiple-Answer question): Match = true; otherwise, false.
+                       Second case (Single-Answer question): expectedAnswer is not an array, so it must be
+                       a radio or text question. */
+                    let isCorrect = Array.isArray(expectedAnswer) ? JSON.stringify(userAnswer.sort()) === JSON.stringify(expectedAnswer.sort()) 
+                    : userAnswer.length === 1 && userAnswer[0] === expectedAnswer.toLowerCase();
+                    
+                    // If the answer is correct, increment the score.
+                    if (isCorrect) {
+                        score++;
+                    }
+
+                    /* another ternary operator to determine if the answer is correct or not. If expectedAnswer 
+                    is an array of answers, join them by a comma and space; otherwise, no comma necessary. */
+                    output.push(`<div><strong>${question}:</strong> ${isCorrect ? "Correct" : "Incorrect"}<br>
+                                Expected Answer: ${Array.isArray(expectedAnswer) ? expectedAnswer.join(", ") : expectedAnswer}</div>`);
+                }
+                
+                /* Calculate the percentage score and display the results
+                   Object.keys() gets an array of all the keys in correctAnswers.
+                   A ternary operator compares percentageScore to determine if user failed or passed (>= 70) the quiz. */
+                let percentageScore = (score / Object.keys(correctAnswers).length) * 100;
+                output.push(`<strong>Total Score: ${score} out of ${Object.keys(correctAnswers).length}</strong>`);
+                output.push(`<div><strong>${percentageScore >= 70 ? "You passed!" : "You failed."}</strong> Score: ${percentageScore}%</div>`);
+                
+                // Display the results in the results div
+                document.getElementById("results").innerHTML = output.join("<br><br>");
+            });
+
+            // Restart button functionality
+            document.getElementById("restart").addEventListener("click", function() {
+                document.getElementById("quizForm").reset();
+                document.getElementById("results").innerHTML = ""; // Clear results
+            });
+        </script>
+    </body>
+</html>
