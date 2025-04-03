@@ -94,7 +94,8 @@
                 let formData = new FormData(e.target);
                 let score = 0;
                 let output = [];
-                
+                let counter = 1;
+
                 // Loop through each question and compare the user's answer to the correct answer (listed above)
                 for (let question in correctAnswers) {
                     let expectedAnswer = correctAnswers[question];
@@ -123,8 +124,10 @@
 
                     /* another ternary operator to determine if the answer is correct or not. If expectedAnswer 
                     is an array of answers, join them by a comma and space; otherwise, no comma necessary. */
-                    output.push(`<div><strong>${question}:</strong> ${isCorrect ? "Correct" : "Incorrect"}<br>
+                    output.push(`<div><strong>Question ${counter}:</strong> <i>${isCorrect ? "Correct" : "Incorrect"}</i><br>
                                 Expected Answer: ${Array.isArray(expectedAnswer) ? expectedAnswer.join(", ") : expectedAnswer}</div>`);
+                    
+                    counter++;
                 }
                 
                 /* Calculate the percentage score and display the results
