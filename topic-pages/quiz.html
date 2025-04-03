@@ -35,38 +35,40 @@
                     <form id="quizForm">
                         <!-- Three radio questions, one text question, and one checkbox question -->
                         <div>
-                            <label for="question1">Select the correct answer: (it's A)</label><br>
-                            <input type="radio" name="q1" value="a"> A<br>
-                            <input type="radio" name="q1" value="b"> B<br>
-                            <input type="radio" name="q1" value="c"> C<br>
+                            <label for="question1">Who developed the first web browser, and where was it created?</label><br>
+                            <input type="radio" name="q1" value="a"> Richard Nixon developed the first web browser while working at the White House.<br>
+                            <input type="radio" name="q1" value="b"> Buzz Aldrin developed the first web browser while working at NASA.<br>
+                            <input type="radio" name="q1" value="c"> Tim Berners-Lee developed the first web browser while working at CERN.<br>
                         </div>
                         <br>
                         <div>
-                            <label for="question2">Select the correct answer: (it's B)</label><br>
-                            <input type="radio" name="q2" value="a"> A<br>
-                            <input type="radio" name="q2" value="b"> B<br>
-                            <input type="radio" name="q2" value="c"> C<br>
+                            <label for="question2">What are two fundamental technologies introduced in the mid-1990s 
+                                that allowed web browsers to support more dynamic and interactive web pages?</label><br>
+                            <input type="radio" name="q2" value="a"> Cascading Style Sheets (CSS) and JavaScript<br>
+                            <input type="radio" name="q2" value="b"> Radios and Televisions<br>
+                            <input type="radio" name="q2" value="c"> Lithium-Ion Batteries and Liquid Natural Gas<br>
                         </div>
                         <br>
                         <div>
-                            <label for="question3">Select the correct answer: (it's C)</label><br>
-                            <input type="radio" name="q3" value="a"> A<br>
-                            <input type="radio" name="q3" value="b"> B<br>
-                            <input type="radio" name="q3" value="c"> C<br>
+                            <label for="question3">What term introduced in 2004 describes the second generation of the 
+                                World Wide Web, characterized by user-generated content and social networking sites?</label><br>
+                            <input type="radio" name="q3" value="a"> Attack on Titan Season 2<br>
+                            <input type="radio" name="q3" value="b"> Web 2.0<br>
+                            <input type="radio" name="q3" value="c"> Half-life 2: Episode 2<br>
                         </div>
                         <br>
                         <div>
-                            <label for="question4">Type the correct answer: (it's "browser")</label><br>
+                            <label for="question4">In the client-sever model, the Web Browser is the ____.</label><br>
                             <br>
                             <input type="text" name="q4"><br>
                         </div>
                         <br>
                         <div>
-                            <label for="question5">Select the correct answers: (they're A, B, and D)</label><br>
-                            <input type="checkbox" name="q5" value="a"> A<br>
-                            <input type="checkbox" name="q5" value="b"> B<br>
-                            <input type="checkbox" name="q5" value="c"> C<br>
-                            <input type="checkbox" name="q5" value="d"> D<br>
+                            <label for="question5">What are the primary functions of a server in the client-server model? (Select all that apply)</label><br>
+                            <input type="checkbox" name="q5" value="a"> The server processes requests from clients.<br>
+                            <input type="checkbox" name="q5" value="b"> The server provides the requested resources or services.<br>
+                            <input type="checkbox" name="q5" value="c"> The server executes a neofetch command in the pre-installed terminal application.<br>
+                            <input type="checkbox" name="q5" value="d"> The server deletes System32.<br>
                         </div>
                         <br>
                         <button type="submit" id="submit">Get Results</button>
@@ -90,7 +92,7 @@
             document.getElementById("quizForm").addEventListener("submit", function(e) {
                 event.preventDefault(); // prevent the page from refreshing
                 
-                let correctAnswers = { q1: "a", q2: "b", q3: "c", q4: "browser", q5: ["a", "b", "d"] };
+                let correctAnswers = { q1: "c", q2: "a", q3: "b", q4: "client", q5: ["a", "b"] };
                 /* This line creates a FormData object that collects the data from the form above when the submit button is hit.
                    event.target is the form element corresponding to the submit event trigger. FormData will store the input in formData. */
                 let formData = new FormData(e.target);
