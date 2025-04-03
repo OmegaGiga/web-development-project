@@ -259,7 +259,7 @@ td {
     text-shadow: 0.1em 0.1em 0.1em lightgray;
     border-radius: 0.6em 0.6em 0.6em;
 }
-#submit :hover {
+#submit:hover {
     width: 100%;
     margin: 0.6em 0 0.6em;
     color: #0047A0;
@@ -276,7 +276,7 @@ td {
     color: #CD2E3A;
     border-radius: 0.6em 0.6em 0.6em;
 }
-#restart :hover {
+#restart:hover {
     margin: 0.6em 0 0.6em;
     background-color: #f7f7f7;
     border: double 0.3em;
