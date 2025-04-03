@@ -263,18 +263,16 @@ td {
     width: 100%;
     margin: 0.6em 0 0.6em;
     color: #0047A0;
-    background-color: lightgray;
+    background-color: #f7f7f7;
     border: double 0.3em;
     text-shadow: 0.1em 0.1em 0.1em lightgray;
     border-radius: 0.6em 0.6em 0.6em;
-    text-decoration:underline;
 }
 #restart {
     margin: 0.6em 0 0.6em;
-    background-color: lightgray;
+    background-color: #f7f7f7;
     border: double 0.3em;
     text-shadow: 0.1em 0.1em 0.1em lightgray;
     color: #CD2E3A;
     border-radius: 0.6em 0.6em 0.6em;
-    text-decoration:underline;
 }
