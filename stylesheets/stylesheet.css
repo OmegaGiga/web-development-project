@@ -71,7 +71,7 @@ td {
     grid-row: 1;
     padding:0.6em;
 }
-#introduction h2, p {
+#introduction h2, #introduction p {
     margin:0.3em;
 }
 #key_terms {
@@ -82,7 +82,7 @@ td {
     grid-row: 2;
     padding:0.6em;
 }
-#key_terms h2, p {
+#key_terms h2, #key_terms p {
     margin:0.3em;
 }
 #table_of_contents {
@@ -226,7 +226,7 @@ td {
     text-align:center;
     padding:0.6em;
 }
-#content h2, p {
+#content h2, #content p {
     margin:0.3em;
 }
 #content ul {
@@ -247,7 +247,7 @@ td {
 #quiz div {
     display:block;
 }
-#quiz h2 p {
+#quiz h2, #quiz p {
     text-align:center;
 }
 #submit {
