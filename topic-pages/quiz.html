@@ -21,7 +21,7 @@
         <!--The header with title.-->
         <div>
             <header>
-                <h1 id="h1_border">= <span id="title_word_1">Browser</span><span id="title_word_2"> History</span> =</h1>
+                <h1 id="h1_border">= <span id="title_word_1">Pop</span><span id="title_word_2"> Quiz</span> =</h1>
             </header>
         </div>
 
@@ -35,40 +35,53 @@
                     <form id="quizForm">
                         <!-- Three radio questions, one text question, and one checkbox question -->
                         <div>
-                            <label for="question1">Who developed the first web browser, and where was it created?</label><br>
-                            <input type="radio" name="q1" value="a"> Richard Nixon developed the first web browser while working at the White House.<br>
-                            <input type="radio" name="q1" value="b"> Buzz Aldrin developed the first web browser while working at NASA.<br>
-                            <input type="radio" name="q1" value="c"> Tim Berners-Lee developed the first web browser while working at CERN.<br>
+                            <label id="question1">Who developed the first web browser, and where was it created?</label><br>
+                            <input type="radio" name="q1" id="richard-nixon" value="a">
+                            <label for="richard-nixon">Richard Nixon developed the first web browser while working at the White House.</label><br>
+                            <input type="radio" name="q1" id="buzz-aldrin" value="b">
+                            <label for="buzz-aldrin">Buzz Aldrin developed the first web browser while working at NASA.</label><br>
+                            <input type="radio" name="q1" id="beners-lee" value="c">
+                            <label for="beners-lee">Tim Berners-Lee developed the first web browser while working at CERN.</label><br>
                         </div>
                         <br>
                         <div>
-                            <label for="question2">What are two fundamental technologies introduced in the mid-1990s 
+                            <label id="question2">What are two fundamental technologies introduced in the mid-1990s 
                                 that allowed web browsers to support more dynamic and interactive web pages?</label><br>
-                            <input type="radio" name="q2" value="a"> Cascading Style Sheets (CSS) and JavaScript<br>
-                            <input type="radio" name="q2" value="b"> Radios and Televisions<br>
-                            <input type="radio" name="q2" value="c"> Lithium-Ion Batteries and Liquid Natural Gas<br>
+                            <input type="radio" name="q2" id="css-javascript" value="a">
+                            <label for="css-javascript">Cascading Style Sheets (CSS) and JavaScript</label><br>
+                            <input type="radio" name="q2" id="radios-televisions" value="b">
+                            <label for="radios-televisions">Radios and Televisions</label><br>
+                            <input type="radio" name="q2" id="batteries-lng" value="c">
+                            <label for="batteries-lng">Lithium-Ion Batteries and Liquid Natural Gas</label><br>
                         </div>
                         <br>
                         <div>
-                            <label for="question3">What term introduced in 2004 describes the second generation of the 
+                            <label id="question3">What term introduced in 2004 describes the second generation of the 
                                 World Wide Web, characterized by user-generated content and social networking sites?</label><br>
-                            <input type="radio" name="q3" value="a"> Attack on Titan Season 2<br>
-                            <input type="radio" name="q3" value="b"> Web 2.0<br>
-                            <input type="radio" name="q3" value="c"> Half-life 2: Episode 2<br>
+                            <input type="radio" name="q3" id="aot-season-2" value="a">
+                            <label for="aot-season-2">Attack on Titan Season 2</label><br>
+                            <input type="radio" name="q3" id="web-2" value="b">
+                            <label for="web-2">Web 2.0</label><br>
+                            <input type="radio" name="q3" id="hl-2-ep-2" value="c">
+                            <label for="hl-2-ep-2">Half-life 2: Episode 2</label><br>
                         </div>
                         <br>
                         <div>
-                            <label for="question4">In the client-sever model, the Web Browser is the ____.</label><br>
+                            <label id="question4">In the client-sever model, the Web Browser is the ____.</label><br>
                             <br>
                             <input type="text" name="q4"><br>
                         </div>
                         <br>
                         <div>
-                            <label for="question5">What are the primary functions of a server in the client-server model? (Select all that apply)</label><br>
-                            <input type="checkbox" name="q5" value="a"> The server processes requests from clients.<br>
-                            <input type="checkbox" name="q5" value="b"> The server provides the requested resources or services.<br>
-                            <input type="checkbox" name="q5" value="c"> The server executes a neofetch command in the pre-installed terminal application.<br>
-                            <input type="checkbox" name="q5" value="d"> The server deletes System32.<br>
+                            <label id="question5">What are the primary functions of a server in the client-server model? (Select all that apply)</label><br>
+                            <input type="checkbox" name="q5" id="server-processes" value="a">
+                            <label for="server-processes">The server processes requests from clients.</label><br>
+                            <input type="checkbox" name="q5" id="server-provides" value="b">
+                            <label for="server-provides">The server provides the requested resources or services.</label><br>
+                            <input type="checkbox" name="q5" id="server-neofetch" value="c">
+                            <label for="server-neofetch">The server executes a neofetch command in the pre-installed terminal application.</label><br>
+                            <input type="checkbox" name="q5" id="server-deletes" value="d">
+                            <label for="server-deletes">The server deletes System32.</label><br>
                         </div>
                         <br>
                         <button type="submit" id="submit">Get Results</button>
@@ -89,37 +102,51 @@
         </div>
 
         <script>
+            /* Layout modeled after a tutorial on https://simplestepscode.com/javascript-quiz-tutorial/ and modified to fit the assignment instructions.
+               Code comments are written with the help of explanations from Microsoft Copilot and are there to help myself understand the code.
+               Specific lines of code, like those pertaining to the FormData object, ternary operator, and JSON methods, 
+               were informed by ChatGPT. Ultimately, I wanted to find a way to take the input data
+               from the form and compare it to a pre-determined set of correct answers stored in an object.
+            */
             document.getElementById("quizForm").addEventListener("submit", function(e) {
                 event.preventDefault(); // prevent the page from refreshing
                 
                 let correctAnswers = { q1: "c", q2: "a", q3: "b", q4: "client", q5: ["a", "b"] };
-                /* This line creates a FormData object that collects the data from the form above when the submit button is hit.
-                   event.target is the form element corresponding to the submit event trigger. FormData will store the input in formData. */
+                /* This line creates a FormData object that collects the data from the form when the submit button is hit.
+                   e.target is the form element corresponding to the submit event trigger. FormData will store the input in formData.
+                */
                 let formData = new FormData(e.target);
-                let score = 0;
-                let output = [];
-                let counter = 1;
+                let score = 0;  // the number of correct answers
+                let output = []; // for printing to the screen
+                let counter = 1; // matches the question number
 
-                // Loop through each question and compare the user's answer to the correct answer (listed above)
+                // Loop through each question and compare the user's answer to the correct answer
                 for (let question in correctAnswers) {
                     let expectedAnswer = correctAnswers[question];
 
-                    /* getAll() makes an array of the values associated with question, which is the key in correctAnswers for the interation.
-                       map() iterates over each answer (ans) in the array, trims, and lowercases the value. */
-                    let userAnswer = formData.getAll(question).map(ans => ans.trim().toLowerCase());
+                    /* getAll() makes an array of the values associated with question.
+                       map() iterates over each answer in the array and trims and lowercases the value.
+                       Therefore, if the question has only one correct answer, userAnswer will be an array with one element/value.
+                       Otherwise, if the question has multiple correct answers, userAnswer will be an array with multiple elements/values.
+                    */
+                    let userAnswer = formData.getAll(question).map(answer => answer.trim().toLowerCase());
                     
                     /* If expectedAnswer is an array (checkbox question), compare sets.
                        This code determines whether the user's answer to a quiz question is correct 
                        by comparing it to the expected answer. It uses a conditional (ternary) operator to handle two 
                        different scenarios: when the expected answer is an array (for multiple-answer questions) and 
                        when it is a single value (for single-answer questions).
-                       JSON.stringify() converts arrays into JSON strings for a "strict comparison," which ensures
-                       the arrays are identical in both content and order after sorting.
-                       First case (Multiple-Answer question): Match = true; otherwise, false.
-                       Second case (Single-Answer question): expectedAnswer is not an array, so it must be
-                       a radio or text question. */
+                       Additional assistance: https://www.w3schools.com/js/js_json_intro.asp
+                       JSON.stringify() converts arrays into JSON strings for comparison after the arrays are sorted alphabetically.
+                       First case (multiple-answer question): identical = true; otherwise, false.
+                       Second case (single-answer question): expectedAnswer is not an array, so it must be a radio or text question.
+                    */
                     let isCorrect = Array.isArray(expectedAnswer) ? JSON.stringify(userAnswer.sort()) === JSON.stringify(expectedAnswer.sort()) 
-                    : userAnswer.length === 1 && userAnswer[0] === expectedAnswer.toLowerCase();
+                    : userAnswer.length === 1 && userAnswer[0] === expectedAnswer.toLowerCase(); 
+                    /* If userAnswer.length is not here, the script wont crash because unswerAnswer[0] will be undefined for an empty array.
+                       However, it is a good to check for it so that undefined does not pass for a proper input, which
+                       could be problematic in a different context. It ultimately verifies that the user selected an answer.
+                    */
                     
                     // If the answer is correct, increment the score.
                     if (isCorrect) {
@@ -127,7 +154,8 @@
                     }
 
                     /* another ternary operator to determine if the answer is correct or not. If expectedAnswer 
-                    is an array of answers, join them by a comma and space; otherwise, no comma necessary. */
+                    is an array of answers, join them by a comma and space; otherwise, no comma necessary.
+                    */
                     output.push(`<div><strong>Question ${counter}:</strong> <i>${isCorrect ? "Correct" : "Incorrect"}</i><br>
                                 Expected Answer: ${Array.isArray(expectedAnswer) ? expectedAnswer.join(", ") : expectedAnswer}</div>`);
                     
@@ -135,10 +163,12 @@
                 }
                 
                 /* Calculate the percentage score and display the results
-                   Object.keys() gets an array of all the keys in correctAnswers.
-                   A ternary operator compares percentageScore to determine if user failed or passed (>= 70) the quiz. */
-                let percentageScore = (score / Object.keys(correctAnswers).length) * 100;
-                output.push(`<strong>Total Score: ${score} out of ${Object.keys(correctAnswers).length}</strong>`);
+                   Object.keys() gets an array of all the keys in correctAnswers, because correctAnswers is an object and does not have a length method.
+                   A ternary operator compares percentageScore to determine if user failed or passed (>= 70) the quiz.
+                */ 
+                let quizLength = Object.keys(correctAnswers).length;
+                let percentageScore = (score / quizLength) * 100;
+                output.push(`<strong>Total Score: ${score} out of ${quizLength}</strong>`);
                 output.push(`<div><strong>${percentageScore >= 70 ? "You passed!" : "You failed."}</strong> Score: ${percentageScore}%</div>`);
                 
                 // Display the results in the results div
@@ -146,7 +176,7 @@
             });
 
             // Restart button functionality
-            document.getElementById("restart").addEventListener("click", function() {
+            document.getElementById("restart").addEventListener("click", function(e) {
                 document.getElementById("quizForm").reset();
                 document.getElementById("results").innerHTML = ""; // Clear results
             });
