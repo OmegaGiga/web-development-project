@@ -112,8 +112,11 @@
                 event.preventDefault(); // prevent the page from refreshing
                 
                 let correctAnswers = { q1: "c", q2: "a", q3: "b", q4: "client", q5: ["a", "b"] };
+
                 /* This line creates a FormData object that collects the data from the form when the submit button is hit.
-                   e.target is the form element corresponding to the submit event trigger. FormData will store the input in formData.
+                   e.target points to the form being submitted (e is the submission event and the form is the target).
+                   FormData will store the input in formData.
+                   Assistance: https://developer.mozilla.org/en-US/docs/Web/API/FormData
                 */
                 let formData = new FormData(e.target);
                 let score = 0;  // the number of correct answers
@@ -124,7 +127,7 @@
                 for (let question in correctAnswers) {
                     let expectedAnswer = correctAnswers[question];
 
-                    /* getAll() makes an array of the values associated with question.
+                    /* getAll() makes an array of the values associated with question for the iteration of the loop.
                        map() iterates over each answer in the array and trims and lowercases the value.
                        Therefore, if the question has only one correct answer, userAnswer will be an array with one element/value.
                        Otherwise, if the question has multiple correct answers, userAnswer will be an array with multiple elements/values.
@@ -136,7 +139,7 @@
                        by comparing it to the expected answer. It uses a conditional (ternary) operator to handle two 
                        different scenarios: when the expected answer is an array (for multiple-answer questions) and 
                        when it is a single value (for single-answer questions).
-                       Additional assistance: https://www.w3schools.com/js/js_json_intro.asp
+                       Assistance: https://www.w3schools.com/js/js_json_intro.asp
                        JSON.stringify() converts arrays into JSON strings for comparison after the arrays are sorted alphabetically.
                        First case (multiple-answer question): identical = true; otherwise, false.
                        Second case (single-answer question): expectedAnswer is not an array, so it must be a radio or text question.
@@ -153,7 +156,7 @@
                         score++;
                     }
 
-                    /* another ternary operator to determine if the answer is correct or not. If expectedAnswer 
+                    /* Another ternary operator to determine if the answer is correct or not. If expectedAnswer 
                     is an array of answers, join them by a comma and space; otherwise, no comma necessary.
                     */
                     output.push(`<div><strong>Question ${counter}:</strong> <i>${isCorrect ? "Correct" : "Incorrect"}</i><br>
