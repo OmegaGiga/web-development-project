@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="web-development-project/stylesheets/stylesheet.css">
         <link rel="icon" type="image/x-icon" href="web-development-project/images/favicon.ico">
         <title>Leonardo's Amazing Research</title>
+        <style>
+            
+        </style>
     </head>
     <body>
         <!--The banner with links.-->
@@ -86,9 +89,9 @@
                         <br>
                         <button type="submit" id="submit">Get Results</button>
                     </form>
-                    
-                    <div id="results"></div>
-
+                    <br>
+                    <div id="results">Submit the quiz to see how you did!</div>
+                    <br>
                     <button id="restart">Restart Quiz</button>
                 </div>
             </div>
@@ -181,7 +184,7 @@
             // Restart button functionality
             document.getElementById("restart").addEventListener("click", function(e) {
                 document.getElementById("quizForm").reset();
-                document.getElementById("results").innerHTML = ""; // Clear results
+                document.getElementById("results").innerHTML = "Submit the quiz to see how you did!"; // Clear results
             });
         </script>
     </body>

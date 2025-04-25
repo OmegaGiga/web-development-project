@@ -248,6 +248,25 @@ td {
 #quiz h2, #quiz p {
     text-align:center;
 }
+#quiz h2 {
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 0.1em 0.05em 0.1em lightgray;
+}
+#quizForm {
+    border: 0.2em double black;
+    padding: 1em;
+}
+#question1, #question2, #question3, #question4, #question5 {
+    font-weight: bold;
+    
+}
+#results {
+    border: 0.2em double #000;
+    padding: 1em;
+    margin-top: 0.1em;
+    text-align: center;
+}
 #submit {
     width: 100%;
     margin: 0.6em 0 0.6em;
