@@ -90,7 +90,7 @@
                         <button type="submit" id="submit">Get Results</button>
                     </form>
                     <br>
-                    <div id="results">Submit the quiz to see how you did!</div>
+                    <div id="results"><p>Submit the quiz to see how you did!</p></div>
                     <br>
                     <button id="restart">Restart Quiz</button>
                 </div>
@@ -184,7 +184,7 @@
             // Restart button functionality
             document.getElementById("restart").addEventListener("click", function(e) {
                 document.getElementById("quizForm").reset();
-                document.getElementById("results").innerHTML = "Submit the quiz to see how you did!"; // Clear results
+                document.getElementById("results").innerHTML = "<p>Submit the quiz to see how you did!</p>"; // Clear results
             });
         </script>
     </body>

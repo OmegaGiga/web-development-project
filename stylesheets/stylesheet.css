@@ -267,6 +267,10 @@ td {
     margin-top: 0.1em;
     text-align: center;
 }
+#results p {
+    margin: 0;
+    font-weight: bold;
+}
 #submit {
     width: 100%;
     margin: 0.6em 0 0.6em;
