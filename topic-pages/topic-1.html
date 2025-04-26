@@ -10,16 +10,24 @@
     </head>
     <body>
         <!--The banner with links.-->
-        <div id="banner_links_black_blue"> <!--This div creates a cascading effect.-->
+        <div id="banner_links_black_blue">
             <div id="banner_links_black">
-               || <a href="web-development-project/index.html">Home</a> |
-                <a href="web-development-project/topic-pages/quiz.html">Quiz</a> |
-                <a href="web-development-project/references.html">References</a> ||
+                <div id="banner_links">
+                    <button id="menu_toggle"><p>Menu</p></button>
+                    <nav id="menu_links">
+                        || <a href="web-development-project/index.html">Home</a> |
+                        <a href="web-development-project/topic-pages/quiz.html">Quiz</a> |
+                        <a href="web-development-project/references.html">References</a> ||
+                    </nav>
+                    <div id="menu_bottom_blue">
+                        <div id="menu_bottom"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!--The header with title.-->
-        <div>
+        <div id="single_word_header">
             <header>
                 <h1 id="h1_border">= <span id="title_word_1">Browser</span><span id="title_word_2"> History</span> =</h1>
             </header>
@@ -52,5 +60,6 @@
                 <p>&copy; 2025 Leonardo J. Mendez-Rivera</p>
             </footer>
         </div>
+        <script src="web-development-project/scripts/menu.js"></script>
     </body>
 </html>
