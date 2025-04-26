@@ -16,7 +16,6 @@ h1 {
     text-align:center;
     font-family:'Courier New', Courier, monospace;
     font-variant:small-caps;
-    font-size:3em;
     padding:0.3em;
     text-shadow: 0.1em 0.1em 0.1em lightgrey;
 }
@@ -89,7 +88,15 @@ td {
     background-color: black;
     display: block;
     padding: 0.3em;
+    border-bottom:#CD2E3A 0.1em solid;
     border-radius: 0 0 1em 1em;
+}
+#menu_bottom_blue {
+    background-color:#0047A0;
+    border-bottom:#0047A0 0.2em solid;
+    border-radius: 0 0 1em 1em;
+    width:100%;
+    height:110%;
 }
 #banner_links {
     display:table;
@@ -99,6 +106,9 @@ td {
     width:100%;
     position:relative;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#banner_br {
+    display:none;
 }
 .grid_container {
     display:grid;
@@ -140,9 +150,9 @@ td {
     grid-row: 3;
 }
 #table_of_contents_blue {
-    background-color:blue;
+    background-color:#0047A0;
     color:white;
-    border-right: blue 0.25em solid;
+    border-right: #0047A0 0.25em solid;
     border-radius:0.6em;
     text-align:center;
     grid-column: 1/2;
@@ -227,6 +237,7 @@ td {
     text-align:center;
     font-family:'Courier New', Courier, monospace;
     font-variant:small-caps;
+    font-size: 2em;
     border: 0.3em solid;
     border-style: double dashed;
     border-radius:10em 10em 5em 5em;
@@ -242,30 +253,13 @@ td {
     color:#0047A0;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-#banner_links_black {
-    display:table;
-    table-layout:auto;
-    color:goldenrod;
-    background-color:black;
-    border-bottom:#CD2E3A 0.1em solid;
-    text-align:center;
-    width:100%;
-}
-#banner_links_black_blue {
-    color:goldenrod;
-    background-color:blue;
-    border-bottom:#0047A0 0.2em solid;
-    width:100%;
-    height:110%;
-}
 .grid_container_basic {
     display:grid;
-    grid-template-columns: 25% 1fr 25%;
-    gap: 0.6em;
+    grid-template-columns: 1fr;
     padding: 0.6em;
 }
 .main_content_box {
-    grid-column: 2 / 3;
+    grid-column: 1/2;
 }
 #content {
     border:black 0.2em solid;
@@ -353,58 +347,11 @@ td {
     color: #CD2E3A;
     border-radius: 0.6em 0.6em 0.6em;
 }
+.no_padding a {
+    padding: 0;
+}
+
 @media (min-width: 704px) {
-    body {
-        display: block;
-        margin: 0;
-        padding: 0.6em;
-        background-color:white;
-    }
-    div {
-        display:grid;
-    }
-    h1 {
-        text-align:center;
-        font-family:'Courier New', Courier, monospace;
-        font-variant:small-caps;
-        font-size:3em;
-        padding:0.3em;
-        text-shadow: 0.1em 0.1em 0.1em lightgrey;
-    }
-    a {
-        color:goldenrod;
-        font-size:1.2em;
-        font-weight:bolder;
-        text-decoration: none;
-        padding: 0.75em 1.5em;
-    }
-    a:hover {
-        color:darkgoldenrod;
-        text-decoration: underline;
-    }
-    table {
-        border:0.5em black;border-style:double dashed;
-    }
-    td {
-        border-bottom:0.1em black;border-style:solid;
-    }
-    .body {
-        text-align:center;
-        font-size:110%;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    #header_word_red {
-        font-variant:small-caps;
-        font-size:120%;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color:#CD2E3A;
-    }
-    #header_word_blue {
-        color:#0047A0;
-        font-style:italic;
-        font-size:80%;
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
     #menu_toggle {
         display: none;
     }
@@ -425,6 +372,14 @@ td {
     #menu_bottom {
         display: none;
     }
+    #menu_bottom_blue {
+        display: none;
+        background-color:#0047A0;
+        border-bottom:#0047A0 0.2em solid;
+        border-radius: 0 0 1em 1em;
+        width:100%;
+        height:110%;
+    }
     #banner_links {
         display: table;
         table-layout: auto;
@@ -433,11 +388,44 @@ td {
         width: 100%;
         position: relative;
     }
+    #banner_links_black {
+        display:table;
+        table-layout:auto;
+        color:goldenrod;
+        background-color:black;
+        border-bottom:#CD2E3A 0.1em solid;
+        border-radius: 1em;
+        text-align:center;
+        width:100%;
+        padding-bottom: 1.5em;
+    }
+    #banner_links_black_blue {
+        color:goldenrod;
+        background-color:#0047A0;
+        border-bottom:#0047A0 0.2em solid;
+        border-radius: 1em;
+        width:100%;
+        height:110%;
+    }
+    #banner_br {
+        display:block;
+    }
+    #header_index {
+        font-size: 2.5em;
+    }
     .grid_container {
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 0.6em;
         padding: 0.6em;
+    }
+    .grid_container_basic {
+        display:grid;
+        grid-template-columns: 10% 1fr 10%;
+        padding: 0.6em;
+    }
+    .main_content_box {
+        grid-column: 2/3;
     }
     #introduction {
         border:black 0.2em solid;
@@ -471,9 +459,9 @@ td {
         grid-row:1 / 3;
     }
     #table_of_contents_blue {
-        background-color:blue;
+        background-color:#0047A0;
         color:white;
-        border-right: blue 0.25em solid;
+        border-right: #0047A0 0.25em solid;
         border-radius:0.6em;
         text-align:center;
         grid-column: 3 / 4;
@@ -490,195 +478,91 @@ td {
         padding:1em;
         margin:0;
     }
-    #table_of_contents a {
-        color:white;
-        text-decoration:none;
-        padding:0;
-        margin:0;
-    }
-    #table_of_contents a:hover {
-        text-decoration:underline;
-        color:goldenrod;
-    }
-    .footer {
-        text-align:center;
-        font-size:80%;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color:goldenrod;
-        background-color:black;
-        border-radius:1em;
-        position:sticky;
-        margin-top:0.6em;
-    }
-    .banner-top-left {
-        position:static;
-        top: 10%;
-        left: 0;
-        width: 10%;
-        height: auto;
-        transform: rotate(135deg);
-    }
-    .banner-top-right {
-        position:static;
-        top: 10%;
-        float:right;
-        right: 0;
-        width: 10%;
-        height: auto;
-        transform: rotate(-135deg);
-    }
-    .banner-bottom-left {
-        position:static;
-        top: 10%;
-        left: 0;
-        width: 10%;
-        height: auto;
-        transform: rotate(-135deg);
-    }
-    .banner-bottom-right {
-        position:static;
-        top: 10%;
-        float:right;
-        right: 0;
-        width: 10%;
-        height: auto;
-        transform: rotate(135deg);
-    }
-    #header {
-        margin-top:1%;
-        margin-bottom:5%;
-    }
-    
+
     /*Topic, Quiz, & References styles ––––––––––––––––––––––––––––––––––––––––––––––––– */
     #h1_border {
-        text-align:center;
-        font-family:'Courier New', Courier, monospace;
-        font-variant:small-caps;
-        border: 0.3em solid;
-        border-style: double dashed;
-        border-radius:10em 10em 5em 5em;
-        padding:0.3em;
-        text-shadow: 0.1em 0.1em 0.1em lightgrey;
+        font-size: 2.3em;
     }
-    #title_word_1 {
-        font-variant:small-caps;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color:#CD2E3A;
+    #single_word_header {
+        grid-template-columns:5% 1fr 5%;
     }
-    #title_word_2 {
-        color:#0047A0;
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    header {
+        grid-column: 2/3;
     }
-    #banner_links_black {
-        display:table;
-        table-layout:auto;
-        color:goldenrod;
-        background-color:black;
-        border-bottom:#CD2E3A 0.1em solid;
-        text-align:center;
-        width:100%;
-    }
-    #banner_links_black_blue {
-        color:goldenrod;
-        background-color:blue;
-        border-bottom:#0047A0 0.2em solid;
-        width:100%;
-        height:110%;
+}
+
+@media (min-width:1920px) {
+    .grid_container {
+        grid-template-columns: 5% 1fr 1fr 5%;
     }
     .grid_container_basic {
         display:grid;
-        grid-template-columns: 25% 1fr 25%;
-        gap: 0.6em;
+        grid-template-columns: 20% 1fr 20%;
         padding: 0.6em;
     }
     .main_content_box {
-        grid-column: 2 / 3;
+        grid-column: 2/3;
     }
-    #content {
-        border:black 0.2em solid;
-        border-radius:0.6em;
-        text-align:center;
-        padding:0.6em;
+    #header_index {
+        font-size: 3em;
     }
-    #content h2, #content p {
-        margin:0.3em;
+    #introduction {
+        grid-column: 2/3
     }
-    #content ul {
-        list-style-type: none;
-        padding:0;
+    #table_of_contents {
+        grid-column: 3/4
     }
-    #content ul li {
-        padding:0.3em;
+    #key_terms {
+        grid-column: 2/3
     }
-    .no_margin {
-        margin:0;
+    #h1_border {
+        font-size: 3em;
     }
-    #quiz {
-        border:black 0.2em solid;
-        border-radius:0.6em;
-        padding:0.6em;
+    #single_word_header {
+        grid-template-columns: 10% 1fr 10%;
     }
-    #quiz div {
-        display:block;
+}
+
+@media (min-width:2000px) {
+    .grid_container_basic {
+        display:grid;
+        grid-template-columns: 25% 1fr 25%;
+        padding: 0.6em;
     }
-    #quiz h2, #quiz p {
-        text-align:center;
+    .main_content_box {
+        grid-column: 2/3;
     }
-    #quiz h2 {
+    #header_index {
+        font-size: 3.5em;
+    }
+    #menu_links {
+        font-size: 1.5em;
+    }
+    #banner_links_black {
+        padding-bottom: 2em;
+    }
+    #introduction h2, #key_terms h2, #table_of_contents h2 {
         font-size: 2em;
-        text-align: center;
-        text-shadow: 0.1em 0.05em 0.1em lightgray;
     }
-    #quizForm {
-        border: 0.2em double black;
-        padding: 1em;
+    #introduction p, #key_terms td {
+        font-size: 1.5em;
     }
-    #question1, #question2, #question3, #question4, #question5 {
-        font-weight: bold;
-        
+    #table_of_contents a {
+        font-size: 1.5em;
     }
-    #results {
-        border: 0.2em double #000;
-        padding: 1em;
-        margin-top: 0.1em;
-        text-align: center;
+    .footer {
+        font-size: 90%;
     }
-    #results p {
-        margin: 0;
-        font-weight: bold;
+}
+
+@media (min-width:2500px) {
+    .grid_container {
+        grid-template-columns: 10% 1fr 1fr 10%;
     }
-    #submit {
-        width: 100%;
-        margin: 0.6em 0 0.6em;
-        color: #0047A0;
-        background-color: white;
-        border: double 0.3em;
-        text-shadow: 0.1em 0.1em 0.1em lightgray;
-        border-radius: 0.6em 0.6em 0.6em;
+    #header_index {
+        font-size: 4em;
     }
-    #submit:hover {
-        width: 100%;
-        margin: 0.6em 0 0.6em;
-        color: #0047A0;
-        background-color: #f7f7f7;
-        border: double 0.3em;
-        text-shadow: 0.1em 0.1em 0.1em lightgray;
-        border-radius: 0.6em 0.6em 0.6em;
-    }
-    #restart {
-        margin: 0.6em 0 0.6em;
-        background-color: white;
-        border: double 0.3em;
-        text-shadow: 0.1em 0.1em 0.1em lightgray;
-        color: #CD2E3A;
-        border-radius: 0.6em 0.6em 0.6em;
-    }
-    #restart:hover {
-        margin: 0.6em 0 0.6em;
-        background-color: #f7f7f7;
-        border: double 0.3em;
-        text-shadow: 0.1em 0.1em 0.1em lightgray;
-        color: #CD2E3A;
-        border-radius: 0.6em 0.6em 0.6em;
+    .footer {
+        font-size:100%;
     }
 }
