@@ -11,17 +11,28 @@
     <body>
         <!--The banner with links.-->
         <div id="banner_links">
-           || <a href="web-development-project/index.html">Home</a> |
-            <a href="web-development-project/topic-pages/quiz.html">Quiz</a> |
-            <a href="web-development-project/references.html">References</a> ||
+            <button id="menu_toggle"><p>Menu</p></button>
+            <nav id="menu_links">
+                || <a href="web-development-project/index.html">Home</a> |
+                <a href="web-development-project/topic-pages/quiz.html">Quiz</a> |
+                <a href="web-development-project/references.html">References</a> ||
+            </nav>
+            <div id="menu_bottom_blue">
+                <div id="menu_bottom"></div>
+            </div>
         </div>
-        
+        <br>
         <!--The header with title.-->
         <div id="header">
             <header>
                 <img src="web-development-project/page-designs/banner-element-1.png" alt="Top-left symbol of Korean flag." class="banner-top-left">
                 <img src="web-development-project/page-designs/banner-element-2.png" alt="Top-right symbol of Korean flag." class="banner-top-right">
-                <h1>Leonardo's <span id="header_span">Amazing</span> Research<span id="header_subtext"><br>ON WEB BROWSERS</span></h1>
+                <h1 id="header_index">
+                    Leonardo's
+                    <span id="header_word_red">Amazing</span>
+                    Research
+                    <span id="header_word_blue"><br>ON WEB BROWSERS</span>
+                </h1>
                 <img src="web-development-project/page-designs/banner-element-3.png" alt="Bottom-left symbol of Korean flag." class="banner-bottom-left">
                 <img src="web-development-project/page-designs/banner-element-4.png" alt="Bottom-right symbol of Korean flag." class="banner-bottom-right">
             </header>
@@ -72,5 +83,6 @@
                 <p>&copy; 2025 Leonardo J. Mendez-Rivera</p>
             </footer>
         </div>
+        <script src="web-development-project/scripts/menu.js"></script>
     </body>
 </html>

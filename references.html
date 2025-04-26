@@ -10,16 +10,24 @@
     </head>
     <body>
         <!--The banner with links.-->
-        <div id="banner_links_black_blue"> <!--This div creates a cascading effect.-->
+        <div id="banner_links_black_blue">
             <div id="banner_links_black">
-               || <a href="web-development-project/index.html">Home</a> |
-                <a href="web-development-project/topic-pages/quiz.html">Quiz</a> |
-                <a href="web-development-project/references.html">References</a> ||
-            </div>
+                <div id="banner_links">
+                    <button id="menu_toggle"><p>Menu</p></button>
+                    <nav id="menu_links">
+                        || <a href="web-development-project/index.html">Home</a> |
+                        <a href="web-development-project/topic-pages/quiz.html">Quiz</a> |
+                        <a href="web-development-project/references.html">References</a> ||
+                    </nav>
+                    <div id="menu_bottom_blue">
+                        <div id="menu_bottom"></div>
+                    </div>
+                </div>
         </div>
-
+        </div>
+        
         <!--The header with title.-->
-        <div>
+        <div id="single_word_header">
             <header>
                 <h1 id="h1_border">= <span id="title_word_1">Refer</span><span id="title_word_2">ences</span> =</h1>
             </header>
@@ -32,7 +40,7 @@
                     <h2>Works Cited</h2>
                     <p>These are some useful resources, which I also happened to cite.</p>
                     <h3>A Brief History of the Web Browser</h3>
-                    <ul class="no_margin"> <!--This will be replaced eventually.-->
+                    <ul class="no_margin no_padding"> <!--This will be replaced eventually.-->
                         <li><a href="https://www.webopedia.com/definitions/web-as-a-platform/">Webopedia – Web as a Platform</a></li>
                         <li><a href="https://techterms.com/definition/web20">TechTerms – Web 2.0</a></li>
                         <li><a href="https://webfoundation.org/about/vision/history-of-the-web/">Web Foundation – History of the Web</a></li>
@@ -41,7 +49,7 @@
                         <li><a href="https://www.telefonica.com/en/communication-room/blog/history-evolution-web-browsers/">Telefónica – History and Evolution of Web Browsers</a></li>
                     </ul>
                     <h3>The Client–Server Model</h3>
-                    <ul class="no_margin">
+                    <ul class="no_margin no_padding">
                         <li><a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">Wikipedia – Client-server model</a></li>
                     </ul>
                 </div>
@@ -54,5 +62,6 @@
                 <p>&copy; 2025 Leonardo J. Mendez-Rivera</p>
             </footer>
         </div>
+        <script src="web-development-project/javascript/menu.js"></script>
     </body>
 </html>
