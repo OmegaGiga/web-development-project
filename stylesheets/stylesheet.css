@@ -266,6 +266,10 @@ td {
     border-radius:0.6em;
     text-align:center;
     padding:0.6em;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#content a {
+	font-weight:400;
 }
 #content h2, #content p {
     margin:0.3em;
