@@ -90,7 +90,6 @@
                                 <input type="radio" name="q3" id="hl-2-ep-2" value="c">
                                 <span for="hl-2-ep-2">Half-life 2: Episode 2</span>
                             </label>
-                            
                         </div>
                         <br>
                         <div id="quiz_section_4">
@@ -121,7 +120,9 @@
                         <button type="submit" id="submit">Get Results</button>
                     </form>
                     <br>
-                    <div id="results"><p>Submit the quiz to see how you did!</p></div>
+                    <div id="results">
+                        <p>Submit the quiz to see how you did!</p>
+                    </div>
                     <br>
                     <button id="restart">Restart Quiz</button>
                 </div>
@@ -134,7 +135,8 @@
                 <p>&copy; 2025 Leonardo J. Mendez-Rivera</p>
             </footer>
         </div>
-
+        
+        <!--This script runs the quiz.-->
         <script>
             /* Layout modeled after a tutorial on https://simplestepscode.com/javascript-quiz-tutorial/ and modified to fit the assignment instructions.
                Code comments are written with the help of explanations from Microsoft Copilot and are there to help myself understand the code.
@@ -218,6 +220,8 @@
                 document.getElementById("results").innerHTML = "<p>Submit the quiz to see how you did!</p>"; // Clear results
             });
         </script>
+
+        <!--This script runs the mobile-friendly menu.-->
         <script src="web-development-project/scripts/menu.js"></script>
     </body>
 </html>
