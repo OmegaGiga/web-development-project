@@ -281,6 +281,18 @@ td {
 #content ul li {
     padding:0.3em;
 }
+.image_container {
+	text-align: center;
+}
+#topic_image {
+    display: inline-block;
+    max-width: fit-content;
+    padding: 0;
+	margin: 0 auto;
+}
+#topic_image img {
+	display: block;
+}
 .no_margin {
     margin:0;
 }
