@@ -237,7 +237,7 @@ td {
     text-align:center;
     font-family:'Courier New', Courier, monospace;
     font-variant:small-caps;
-    font-size: 2em;
+    font-size: 1.3em;
     border: 0.3em solid;
     border-style: double dashed;
     border-radius:10em 10em 5em 5em;
@@ -284,6 +284,7 @@ td {
     border:black 0.2em solid;
     border-radius:0.6em;
     padding:0.6em;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #quiz div {
     display:block;
@@ -292,7 +293,6 @@ td {
     text-align:center;
 }
 #quiz h2 {
-    font-size: 2em;
     text-align: center;
     text-shadow: 0.1em 0.05em 0.1em lightgray;
 }
@@ -320,7 +320,8 @@ td {
     background-color: white;
     border: double 0.3em;
     text-shadow: 0.1em 0.1em 0.1em lightgray;
-    border-radius: 0.6em 0.6em 0.6em;
+    border-radius: 0.6em;
+	padding: 0.6em;
 }
 #submit:hover {
     width: 100%;
@@ -329,7 +330,8 @@ td {
     background-color: #f7f7f7;
     border: double 0.3em;
     text-shadow: 0.1em 0.1em 0.1em lightgray;
-    border-radius: 0.6em 0.6em 0.6em;
+    border-radius: 0.6em;
+	padding: 0.6em;
 }
 #restart {
     margin: 0.6em 0 0.6em;
@@ -337,7 +339,8 @@ td {
     border: double 0.3em;
     text-shadow: 0.1em 0.1em 0.1em lightgray;
     color: #CD2E3A;
-    border-radius: 0.6em 0.6em 0.6em;
+    border-radius: 0.6em;
+	padding: 0.6em;
 }
 #restart:hover {
     margin: 0.6em 0 0.6em;
@@ -345,10 +348,67 @@ td {
     border: double 0.3em;
     text-shadow: 0.1em 0.1em 0.1em lightgray;
     color: #CD2E3A;
-    border-radius: 0.6em 0.6em 0.6em;
+    border-radius: 0.6em;
+	padding: 0.6em;
 }
 .no_padding a {
     padding: 0;
+}
+.radio-item {
+    border: double 0.2em black;
+	border-radius: 0.6em;
+	margin:0.5em;
+	margin-left: 0;
+	margin-right: 0;
+	padding:0px;
+	background-color:#f4f4f4;
+	display: flex;
+}
+.radio-item span {
+	padding:10px;
+	flex-grow:2;
+}			
+input[type=radio] {
+	display:none;
+}			
+input[type=radio]:checked ~ span {
+	background-color: #CD2E3A;
+	border-radius: 0.3em;
+	color:white;
+}
+.checkbox-item {
+	border: double 0.2em black;
+	border-radius: 0.6em;
+	margin:0.5em;
+	margin-left: 0;
+	margin-right: 0;
+	padding:0px;
+	background-color:#f4f4f4;
+	display: flex;
+}
+.checkbox-item span {
+	padding:10px;
+	flex-grow:2;
+}
+input[type=checkbox] {
+	display:none;
+}
+input[type=checkbox]:checked ~ span {
+	background-color: #CD2E3A;
+	border-radius: 0.3em;
+	color:white;
+}
+input[type=text] {
+	width: 100%;
+	box-sizing:border-box;
+	padding: 0.6em;
+	margin: 0.5em 0 0.5em 0;
+}
+
+@media (min-width:503px) {
+	#h1_border {
+		font-size: 2em;
+	}
 }
 
 @media (min-width: 704px) {
@@ -488,6 +548,14 @@ td {
     }
     header {
         grid-column: 2/3;
+    }
+}
+
+@media (min-width:1024px){
+	.grid_container_basic {
+        display:grid;
+        grid-template-columns: 15% 1fr 15%;
+        padding: 0.6em;
     }
 }
 

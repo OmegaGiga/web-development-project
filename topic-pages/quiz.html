@@ -16,7 +16,7 @@
         <div id="banner_links_black_blue">
             <div id="banner_links_black">
                 <div id="banner_links">
-                    <button id="menu_toggle"><p>Menu</p></button>
+                    <button id="menu_toggle"><p>☰ Menu</p></button>
                     <nav id="menu_links">
                         || <a href="web-development-project/index.html">Home</a> |
                         <a href="web-development-project/topic-pages/quiz.html">Quiz</a> |
@@ -45,54 +45,80 @@
                     <br>
                     <form id="quizForm">
                         <!-- Three radio questions, one text question, and one checkbox question -->
-                        <div>
+                        <div id="quiz_section_1">
                             <label id="question1">Who developed the first web browser, and where was it created?</label><br>
-                            <input type="radio" name="q1" id="richard-nixon" value="a">
-                            <label for="richard-nixon">Richard Nixon developed the first web browser while working at the White House.</label><br>
-                            <input type="radio" name="q1" id="buzz-aldrin" value="b">
-                            <label for="buzz-aldrin">Buzz Aldrin developed the first web browser while working at NASA.</label><br>
-                            <input type="radio" name="q1" id="beners-lee" value="c">
-                            <label for="beners-lee">Tim Berners-Lee developed the first web browser while working at CERN.</label><br>
+                            <label class="radio-item">
+                                <input type="radio" name="q1" id="richard-nixon" value="a">
+                                <span for="richard-nixon">Richard Nixon developed the first web browser while working at the White House.</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="q1" id="buzz-aldrin" value="b">
+                                <span for="buzz-aldrin">Buzz Aldrin developed the first web browser while working at NASA.</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="q1" id="beners-lee" value="c">
+                                <span for="beners-lee">Tim Berners-Lee developed the first web browser while working at CERN.</span>
+                            </label>
                         </div>
                         <br>
-                        <div>
+                        <div id="quiz_section_2">
                             <label id="question2">What are two fundamental technologies introduced in the mid-1990s 
                                 that allowed web browsers to support more dynamic and interactive web pages?</label><br>
-                            <input type="radio" name="q2" id="css-javascript" value="a">
-                            <label for="css-javascript">Cascading Style Sheets (CSS) and JavaScript</label><br>
-                            <input type="radio" name="q2" id="radios-televisions" value="b">
-                            <label for="radios-televisions">Radios and Televisions</label><br>
-                            <input type="radio" name="q2" id="batteries-lng" value="c">
-                            <label for="batteries-lng">Lithium-Ion Batteries and Liquid Natural Gas</label><br>
+                            <label class="radio-item">
+                                <input type="radio" name="q2" id="css-javascript" value="a">
+                                <span for="css-javascript">Cascading Style Sheets (CSS) and JavaScript</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="q2" id="radios-televisions" value="b">
+                                <span for="radios-televisions">Radios and Televisions</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="q2" id="batteries-lng" value="c">
+                                <span for="batteries-lng">Lithium-Ion Batteries and Liquid Natural Gas</span>
+                            </label>
                         </div>
                         <br>
-                        <div>
+                        <div id="quiz_section_3">
                             <label id="question3">What term introduced in 2004 describes the second generation of the 
                                 World Wide Web, characterized by user-generated content and social networking sites?</label><br>
-                            <input type="radio" name="q3" id="aot-season-2" value="a">
-                            <label for="aot-season-2">Attack on Titan Season 2</label><br>
-                            <input type="radio" name="q3" id="web-2" value="b">
-                            <label for="web-2">Web 2.0</label><br>
-                            <input type="radio" name="q3" id="hl-2-ep-2" value="c">
-                            <label for="hl-2-ep-2">Half-life 2: Episode 2</label><br>
+                            <label class="radio-item">
+                                <input type="radio" name="q3" id="aot-season-2" value="a">
+                                <span for="aot-season-2">Attack on Titan Season 2</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="q3" id="web-2" value="b">
+                                <span for="web-2">Web 2.0</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="q3" id="hl-2-ep-2" value="c">
+                                <span for="hl-2-ep-2">Half-life 2: Episode 2</span>
+                            </label>
+                            
                         </div>
                         <br>
-                        <div>
+                        <div id="quiz_section_4">
                             <label id="question4">In the client-sever model, the Web Browser is the ____.</label><br>
-                            <br>
                             <input type="text" name="q4"><br>
                         </div>
                         <br>
-                        <div>
+                        <div id="quiz_section_5">
                             <label id="question5">What are the primary functions of a server in the client-server model? (Select all that apply)</label><br>
-                            <input type="checkbox" name="q5" id="server-processes" value="a">
-                            <label for="server-processes">The server processes requests from clients.</label><br>
-                            <input type="checkbox" name="q5" id="server-provides" value="b">
-                            <label for="server-provides">The server provides the requested resources or services.</label><br>
-                            <input type="checkbox" name="q5" id="server-neofetch" value="c">
-                            <label for="server-neofetch">The server executes a neofetch command in the pre-installed terminal application.</label><br>
-                            <input type="checkbox" name="q5" id="server-deletes" value="d">
-                            <label for="server-deletes">The server deletes System32.</label><br>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="q5" id="server-processes" value="a">
+                                <span for="server-processes">The server processes requests from clients.</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="q5" id="server-provides" value="b">
+                                <span for="server-provides">The server provides the requested resources or services.</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="q5" id="server-neofetch" value="c">
+                                <span for="server-neofetch">The server executes a neofetch command in the pre-installed terminal application.</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="q5" id="server-deletes" value="d">
+                                <span for="server-deletes">The server deletes System32.</span>
+                            </label>
                         </div>
                         <br>
                         <button type="submit" id="submit">Get Results</button>
