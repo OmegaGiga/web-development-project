@@ -59,36 +59,34 @@
                         </div>
                         <br>
                         <div id="quiz_section_2">
-                            <label id="question2">What are two fundamental technologies introduced in the mid-1990s 
-                                that allowed web browsers to support more dynamic and interactive web pages?</label><br>
+                            <label id="question2">What was the name of the first web browser created by Tim Berners-Lee?</label><br>
                             <label class="radio-item">
-                                <input type="radio" name="q2" id="css-javascript" value="a">
-                                <span for="css-javascript">Cascading Style Sheets (CSS) and JavaScript</span>
+                                <input type="radio" name="q2" id="mosaic" value="a">
+                                <span for="mosaic">Mosaic</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="q2" id="radios-televisions" value="b">
-                                <span for="radios-televisions">Radios and Televisions</span>
+                                <input type="radio" name="q2" id="worldwideweb" value="b">
+                                <span for="worldwideweb">WorldWideWeb</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="q2" id="batteries-lng" value="c">
-                                <span for="batteries-lng">Lithium-Ion Batteries and Liquid Natural Gas</span>
+                                <input type="radio" name="q2" id="netscape-navigator" value="c">
+                                <span for="netscape-navigator">Netscape Navigator</span>
                             </label>
                         </div>
                         <br>
                         <div id="quiz_section_3">
-                            <label id="question3">What term introduced in 2004 describes the second generation of the 
-                                World Wide Web, characterized by user-generated content and social networking sites?</label><br>
+                            <label id="question3">Which company was involved in developing the first graphical web browser?</label><br>
                             <label class="radio-item">
-                                <input type="radio" name="q3" id="aot-season-2" value="a">
-                                <span for="aot-season-2">Attack on Titan Season 2</span>
+                                <input type="radio" name="q3" id="microsoft" value="a">
+                                <span for="microsoft">Microsoft</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="q3" id="web-2" value="b">
-                                <span for="web-2">Web 2.0</span>
+                                <input type="radio" name="q3" id="apple" value="b">
+                                <span for="apple">Apple</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="q3" id="hl-2-ep-2" value="c">
-                                <span for="hl-2-ep-2">Half-life 2: Episode 2</span>
+                                <input type="radio" name="q3" id="netscape" value="c">
+                                <span for="netscape">Netscape</span>
                             </label>
                         </div>
                         <br>
@@ -147,7 +145,7 @@
             document.getElementById("quizForm").addEventListener("submit", function(e) {
                 event.preventDefault(); // prevent the page from refreshing
                 
-                let correctAnswers = { q1: "c", q2: "a", q3: "b", q4: "client", q5: ["a", "b"] };
+                let correctAnswers = { q1: "c", q2: "b", q3: "c", q4: "client", q5: ["a", "b"] };
 
                 /* This line creates a FormData object that collects the data from the form when the submit button is hit.
                    e.target points to the form being submitted (e is the submission event and the form is the target).

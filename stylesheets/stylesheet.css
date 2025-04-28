@@ -387,7 +387,7 @@ input[type=radio] {
 	display:none;
 }			
 input[type=radio]:checked ~ span {
-	background-color: #CD2E3A;
+	background-color: #1f68c3;
 	border-radius: 0.3em;
 	color:white;
 }
@@ -409,7 +409,7 @@ input[type=checkbox] {
 	display:none;
 }
 input[type=checkbox]:checked ~ span {
-	background-color: #CD2E3A;
+	background-color: #1f68c3;
 	border-radius: 0.3em;
 	color:white;
 }
