@@ -273,9 +273,6 @@ td {
 #content h2, #content p {
     margin:0.3em;
 }
-#article_header {
-	text-align: center;
-}
 #content ul {
     list-style-type: none;
     padding:0;
@@ -444,6 +441,29 @@ input[type=text] {
 } 
 .article_section.open .article_content {
     padding: 0.8em;
+}
+#article_header {
+	text-align: center;
+}
+#references_content {
+	text-align: center;
+    border:black 0.2em solid;
+    border-radius:0.6em;
+    padding:0.6em;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#references_content a {
+	font-weight:400;
+}
+#references_content h2, #references_content p {
+    margin:0.3em;
+}
+#references_content ul {
+    list-style-type: none;
+    padding:0;
+}
+#references_content ul li {
+    padding: 0.5em;
 }
 
 @media (min-width:503px) {
