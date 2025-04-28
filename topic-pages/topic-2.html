@@ -38,7 +38,10 @@
             <div class="main_content_box">
                 <div id="content">
                     <h2 id="article_header">The Client-Server Model</h2>
-                    <p>The Web operates as a client-server architecture. For most users, the Web browser serves as the client.</p>
+                    <p>
+                        The Web operates as a client-server architecture. For most users, the Web browser
+                         serves as the client.
+                    </p>
                     <br><br>
                     <div class="image_container">
                         <a id="topic_image" title="Gnome-fs-client.svg: David Vignoni
@@ -46,12 +49,122 @@
                         derivative work: Calimo, LGPL &lt;http://www.gnu.org/licenses/lgpl.html&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Client-server-model.svg"><img width="256" alt="Client-server-model" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/256px-Client-server-model.svg.png?20141205053432"></a>
                         <p id="image_caption">The client-server model (Wikipedia).</p>
                     </div>
-                    <h3>What is the Client-Server Model?</h3>
-                    <p>The client-server model is a distributed application structure that partitions tasks or workloads between service (or resource) providers and the clients, who request those services (Wikipedia). This communication usually carried out through a computer network on separate hardware; however, it is possible to run both the client and server on the same device (Wikipedia).</p>
-                    <h3>How Does it Work?</h3>
-                    <p>The Web browser serves as the mechanism with which users access and navigate the Web. Over a computer network, the browser, which is the client, requests a resource, likely a website or hosted file, from a server. In this instance, computational resources are not shared by the client; instead, the server houses the necessary program to handle the client’s request (Wikipedia). This server program handles all the processing involved in retrieving and responding to the client, and when the server’s response has been received by the client browser, the browser renders the document for display on the user’s computer. Among many things, this document could be a website, such as this one!</p>
-                    <h3>Considering the Implications of the Client-Server Model</h3>
-                    <p>The client-server architecture of the Web allows device users to access (or “browse”) the great wealth of information stored digitally and scattered across the globe. As the name suggests, the model facilitates the resource requests of the user, who seeks to fulfill many tasks, such as: email, printing, and–of course–surfing the World Wide Web, among other things (Wikipedia).</p>
+
+                    <div class="article_section">
+                        <button class="article_toggle">
+                            <h3>What is the Client-Server Model?</h3>
+                        </button>
+                        <div class="article_content">
+                            <p>
+                                The client-server model is a distributed application structure that
+                                 partitions tasks or workloads between service (or resource) providers
+                                  and the clients who request those services. This communication is
+                                   usually carried out through a computer network on separate hardware;
+                                    however, it is possible to run both the client and server on the
+                                     same device. Fundamental in modern networking, the client-server
+                                      model allows devices and applications to interact with each other
+                                       over networks like the Internet. In the context of the World Wide
+                                        Web, a web browser often functions as the client side of the
+                                         client-server model. Without this model, there would be no
+                                          practical way for the millions of users who now use the
+                                           Internet to access the Web.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article_section">
+                        <button class="article_toggle">
+                            <h3>How Does it Work?</h3>
+                        </button>
+                        <div class="article_content">
+                            <p>
+                                For the client-server model to facilitate web browsing, there must be a
+                                 web server to which the client (the browser) makes requests. Typically,
+                                  a web server will deliver such content as HTML, CSS, and JavaScript to
+                                   clients, and a web browser acting as the client will be responsible
+                                    for requesting these resources and rendering them if they are
+                                     received. When a request is made to a server, the request is
+                                      processed either through the querying of databases or the
+                                       processing of transmitted data, and then the proper content is
+                                        sent back to the browser to be displayed.
+                                <br><br>
+                                Communication through the client-server model occurs via a
+                                 request-response format. First, the client (in this case, a web
+                                  browser) sends a request to the server for resources like web pages or
+                                   other documents. Afterwards, the server processes the request and
+                                    submits a response. Such an operation often utilizes protocol
+                                     standards like the HyperText Transfer Protocol (HTTP) or its secure
+                                      variant, HTTPS, allowing for seamless communication with various
+                                       systems–even those across the globe.
+                                <br><br>
+                                Naturally, the response-request format is a core feature of interactions on
+                                  the World Wide Web. For example, a user might enter a URL into his or
+                                   her browser’s search bar. When the user returns this URL in the bar,
+                                    the browser (acting as the client) submits an HTTP request to the
+                                     server, which then processes the request and sends the retrieved
+                                      data (as an HTTP response) back to the browser. Since this
+                                       interaction occurs incredibly fast, web browsing thus becomes an
+                                        efficient activity.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article_section">
+                        <button class="article_toggle">
+                            <h3>On the Terminology Used and the Implications of the Technology</h3>
+                        </button>
+                        <div class="article_content">
+                            <p>
+                                With regard to web development, the terms “client-side” and “server-side”
+                                 refer to where the processing of information takes place. Notably,
+                                  interactions that occur on the client-side occur on the user’s web
+                                   browser and include actions like the rendering of documents and web
+                                    pages, which themselves include HTML, CSS, and JavaScript, among
+                                     other things, and images and embedded content like video players
+                                      and news feeds that may furthermore request data from another web
+                                       server. On the other hand, interactions that occur on the
+                                        server-side occur on a web server usually at some undisclosed
+                                         location. Such actions done on the server-side may include the
+                                          processing of form data or the generation of dynamic content
+                                           in response to what the client has requested.
+                                <br><br>
+                                As mentioned, most modern browser and user interactions in the
+                                 client-server model will take place through the HyperText Transfer
+                                  Protocol (HTTP), which is used to communicate between the client and
+                                   the server. The secure version of HTTP is called “HyperText Transfer
+                                    Protocol Secure” and it encrypts the data that is transmitted
+                                     between the client and server to protect the user’s privacy and
+                                      prevent other users from listening in on any data being sent.
+                                       Without it, users sending sensitive data like passwords or
+                                        banking information could become the victims of a cyber-attack
+                                         or identity theft, among other things. Ultimately, the HTTP and
+                                          HTTPS protocols structure the way in which data is transmitted
+                                           and received across the Internet, ensuring that data is
+                                            transmitted reliably on the Web; and with this in mind,
+                                             modern web browsers may ensure that a website supporting
+                                              HTTPS is visited as opposed to the basic HTTP. Otherwise,
+                                               the browser may issue a warning about entering sensitive
+                                                information on the site.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article_section">
+                        <button class="article_toggle">
+                            <h3>Concluding Remarks</h3>
+                        </button>
+                        <div class="article_content">
+                            <p>
+                                The client-server model is a fundamental technology for operating the
+                                 World Wide Web. As has been described, the model structures a way for
+                                  clients, like web browsers, to communicate with servers and access and
+                                   navigate information over the Internet. Via a request-response cycle,
+                                    alongside protocols like HTTP and HTTPS, users can retrieve and
+                                     interact with web content both efficiently and securely in a matter
+                                      of seconds.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
